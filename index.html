@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Liquidación de Haberes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Liquidación de Haberes</h1>
+        <label>Salario Mensual (USD): <input type="number" id="salario" /></label>
+        <label>Meses Trabajados: <input type="number" id="meses" /></label>
+        <label>Salarios del Período (para Décimo Tercero): <input type="number" id="salarios_periodo" /></label>
+        <label>Región:
+            <select id="region">
+                <option value="costa">Costa / Galápagos</option>
+                <option value="sierra">Sierra / Amazonía</option>
+            </select>
+        </label>
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="reiniciar()">Reiniciar</button>
+        <button onclick="exportarPDF()">Exportar PDF</button>
+        <button onclick="toggleModo()">Modo Claro/Oscuro</button>
+        <div id="resultados"></div>
+        <h2>Historial de Cálculos</h2>
+        <ul id="historial"></ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
